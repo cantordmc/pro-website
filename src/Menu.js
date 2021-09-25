@@ -38,7 +38,7 @@ function a11yProps(index) {
   };
 }
 
-export default function VerticalTabs() {
+export default function Menu() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -47,7 +47,7 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 600}}
     >
       <Tabs
         orientation="vertical"
@@ -60,7 +60,8 @@ export default function VerticalTabs() {
         <Tab label="Who We Are" {...a11yProps(0)} />
         <Tab label="Artists" {...a11yProps(1)} />
         <Tab label="Releases" {...a11yProps(2)} />
-        <Tab label="Techniques" {...a11yProps(3)} />
+        <Tab label="Lessons" {...a11yProps(3)} />
+        <Tab label="Contact" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         Who We Are
@@ -72,7 +73,7 @@ export default function VerticalTabs() {
         Releases
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Techniques
+        Lessons
       </TabPanel>
       <TabPanel value={value} index={4}>
         Contact

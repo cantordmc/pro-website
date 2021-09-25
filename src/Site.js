@@ -1,25 +1,24 @@
 import React from 'react';
 
 import Paper from 'material-ui/Paper';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
-
-import Image from '../img/main.jpg'; // Import using relative path
-
+import Menu from './Menu';
+import SearchAppBar from './SearchAppBar';
 
 const styles = {
-    paperContainer: {
-        background-color: `url(${Image})`
-    }
 };
 
-export default class Home extends React.Component{
+export default class Site extends React.Component{
     render(){
         return(
-            <Paper>
-                <Menu />
-            </Paper>
+            <MuiThemeProvider>
+                <Paper>
+                    <SearchAppBar />
+                    <Menu />
+                </Paper>
+            </MuiThemeProvider>
         )
     }
 }
