@@ -1,21 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 import Site from './Site';
-import { blueGrey, orange } from '@material-ui/core/colors'
 
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider} from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { blueGrey, orange } from '@mui/material/colors';
+import { makeStyles } from "@material-ui/core/styles";
 
-const theme = createTheme({
+
+const custom_theme = createTheme({
   palette: {
+    mode: "dark",
     primary: blueGrey,
-    secondary: orange
-    }
+    secondary: orange,
+    background: '#263238'
+  }
 })
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={custom_theme}>
         <Site />
       </ThemeProvider>
   );

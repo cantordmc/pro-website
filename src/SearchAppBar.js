@@ -8,6 +8,13 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Paper from '@mui/material/Paper';
+import CssBaseline from '@mui/material/CssBaseline';
+
+
+
+import Menu from './Menu';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -51,15 +58,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar
+        position="fixed"
+        color='primary'
+      >
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="secondary"
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
@@ -69,6 +81,8 @@ export default function SearchAppBar() {
             variant="h6"
             noWrap
             component="div"
+            color="secondary.light"
+            fontWeight="fontWeightBold"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             Producers and Remixers Org at UCSD
@@ -84,6 +98,8 @@ export default function SearchAppBar() {
           </Search>
         </Toolbar>
       </AppBar>
+      <Offset />
+      <Menu />
     </Box>
   );
 }

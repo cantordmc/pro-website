@@ -1,25 +1,23 @@
 import React from 'react';
 
-import Paper from 'material-ui/Paper';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import { makeStyles } from '@mui/styles';
 
-import IconButton from 'material-ui/IconButton';
-import ActionHome from 'material-ui/svg-icons/action/home';
-import Menu from './Menu';
 import SearchAppBar from './SearchAppBar';
-import { ThemeProvider} from '@material-ui/core';
 
+const useStyles = makeStyles((theme) => ({
+  backgroundPaper: {
+    backgroundColor: "#112"
+  }
+}));
 
-const styles = {
-};
+export default function Site(){
+    const classes = useStyles();
 
-export default class Site extends React.Component{
-    render(){
-        return(
-            <Box>
+    return(
+            <Paper className={classes.backgroundPaper} square="true">
                 <SearchAppBar />
-                <Menu />
-            </Box>
-        )
-    }
+            </Paper>
+    )
 }

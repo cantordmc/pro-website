@@ -4,6 +4,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Home from './Home';
+import Artists from './Artists';
+import Releases from './Releases';
+import Lessons from './Lessons';
+import Contact from './Contact';
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -47,12 +58,16 @@ export default function Menu() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 600}}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: window.innerHeight-65
+  }}
     >
+     <div style={{position: "sticky"}}>
       <Tabs
         orientation="vertical"
-        variant="scrollable"
         value={value}
+        scrollable = "true"
+        textColor="secondary"
+        indicatorColor="secondary"
         onChange={handleChange}
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
@@ -63,20 +78,71 @@ export default function Menu() {
         <Tab label="Lessons" {...a11yProps(3)} />
         <Tab label="Contact" {...a11yProps(4)} />
       </Tabs>
+      </div>
       <TabPanel value={value} index={0}>
-        Who We Are
+        <Box width={window.innerWidth} position="fixed">
+          <Grid container spacing={0}>
+            <Grid item xs={1}>
+            </Grid>
+            <Grid item xs={8}>
+              <Home />
+            </Grid>
+            <Grid item xs={2}>
+            </Grid>
+          </Grid>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Artists
+       <Box width={window.innerWidth} position="fixed">
+        <Grid container spacing={0}>
+          <Grid item xs={1}>
+          </Grid>
+          <Grid item xs={8}>
+            <Artists />
+          </Grid>
+          <Grid item xs={2}>
+          </Grid>
+        </Grid>
+       </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Releases
+       <Box width={window.innerWidth} position="fixed">
+        <Grid container spacing={0}>
+          <Grid item xs={1}>
+          </Grid>
+          <Grid item xs={8}>
+            <Releases />
+          </Grid>
+          <Grid item xs={2}>
+          </Grid>
+        </Grid>
+       </Box>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Lessons
+       <Box width={window.innerWidth} position="fixed">
+        <Grid container spacing={0}>
+          <Grid item xs={1}>
+          </Grid>
+          <Grid item xs={8}>
+            <Lessons />
+          </Grid>
+          <Grid item xs={2}>
+          </Grid>
+        </Grid>
+       </Box>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Contact
+       <Box width={window.innerWidth} position="fixed">
+        <Grid container spacing={0}>
+          <Grid item xs={1}>
+          </Grid>
+          <Grid item xs={8}>
+            <Contact />
+          </Grid>
+          <Grid item xs={2}>
+          </Grid>
+        </Grid>
+       </Box>
       </TabPanel>
     </Box>
   );
