@@ -1,31 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import Site from './Site';
+import { blueGrey, orange } from '@material-ui/core/colors'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider} from '@material-ui/core';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
-    primary: {
-      light: '#62717b',
-      main: '#37464f',
-      dark: '#101f27',
-      contrastText: '#fff',
-    },
-    secondary: {
-      light: '#ffad42',
-      main: '#f57c00',
-      dark: '#bb4d00',
-      contrastText: '#000',
-    },
-  },
-});
+    primary: blueGrey,
+    secondary: orange
+    }
+})
 
 function App() {
   return (
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <Site />
-      </MuiThemeProvider>
+      </ThemeProvider>
   );
 }
 
