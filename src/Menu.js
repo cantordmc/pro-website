@@ -58,21 +58,21 @@ export default function Menu() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: window.innerHeight-65
+        minHeight = {window.innerHeight-60}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex',
   }}
     >
      <div style={{position: "sticky"}}>
       <Tabs
         orientation="vertical"
         value={value}
-        scrollable = "true"
         textColor="secondary"
         indicatorColor="secondary"
         onChange={handleChange}
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
       >
-        <Tab label="Who We Are" {...a11yProps(0)} />
+        <Tab label="Overview" {...a11yProps(0)} />
         <Tab label="Artists" {...a11yProps(1)} />
         <Tab label="Releases" {...a11yProps(2)} />
         <Tab label="Lessons" {...a11yProps(3)} />
@@ -80,68 +80,38 @@ export default function Menu() {
       </Tabs>
       </div>
       <TabPanel value={value} index={0}>
-        <Box width={window.innerWidth} position="fixed">
-          <Grid container spacing={0}>
-            <Grid item xs={1}>
-            </Grid>
-            <Grid item xs={8}>
+        <Box width={window.innerWidth-300}>
+          <Container>
               <Home />
-            </Grid>
-            <Grid item xs={2}>
-            </Grid>
-          </Grid>
+        </Container>
         </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-       <Box width={window.innerWidth} position="fixed">
-        <Grid container spacing={0}>
-          <Grid item xs={1}>
-          </Grid>
-          <Grid item xs={8}>
+       <Box width={window.innerWidth-300}>
+        <Container>
             <Artists />
-          </Grid>
-          <Grid item xs={2}>
-          </Grid>
-        </Grid>
+          </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-       <Box width={window.innerWidth} position="fixed">
-        <Grid container spacing={0}>
-          <Grid item xs={1}>
-          </Grid>
-          <Grid item xs={8}>
+      <Box width={window.innerWidth-300}>
+       <Container>
             <Releases />
-          </Grid>
-          <Grid item xs={2}>
-          </Grid>
-        </Grid>
+          </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={3}>
-       <Box width={window.innerWidth} position="fixed">
-        <Grid container spacing={0}>
-          <Grid item xs={1}>
-          </Grid>
-          <Grid item xs={8}>
+       <Box width={window.innerWidth-300}>
+        <Container>
             <Lessons />
-          </Grid>
-          <Grid item xs={2}>
-          </Grid>
-        </Grid>
+         </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={4}>
-       <Box width={window.innerWidth} position="fixed">
-        <Grid container spacing={0}>
-          <Grid item xs={1}>
-          </Grid>
-          <Grid item xs={8}>
+       <Box width={window.innerWidth-300}>
+        <Container>
             <Contact />
-          </Grid>
-          <Grid item xs={2}>
-          </Grid>
-        </Grid>
+          </Container>
        </Box>
       </TabPanel>
     </Box>

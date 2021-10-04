@@ -10,6 +10,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Paper from '@mui/material/Paper';
 import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+
 
 
 
@@ -62,21 +64,11 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 export default function SearchAppBar() {
   return (
+
     <Box sx={{ flexGrow: 1}}>
-      <AppBar
-        position="fixed"
-        color='primary'
+      <AppBar position="static"
       >
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="secondary"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             noWrap
@@ -89,7 +81,6 @@ export default function SearchAppBar() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Offset />
       <Menu />
     </Box>
   );
