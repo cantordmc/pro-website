@@ -20,7 +20,7 @@ export default function Site(){
         <Card sx={{ maxWidth: window.innerWidth-600 }}>
             <CardContent>
                 <Typography variant="body1" gutterBottom>
-                    We like to produce music and help other UCSD students produce with us! We meet weekly Tuesdays at 5pm.
+                    We like to produce music and help other UCSD students produce with us! We meet weekly Tuesdays at 5pm in CPMC 204.
                 </Typography>
                 <Link href="https://linktr.ee/PRO_at_UCSD" underline="none">
                 <Button variant="contained">Discover Our Club</Button>

@@ -59,7 +59,7 @@ export default function Site(){
        <Grid item xs={5}>
        <Item elevation={1}>
        <Typography variant="overline" color="text.primary">
-           Tuesday October 5, 5:00 PM
+           Tuesday October 12, 5:00 PM
        </Typography>
        </Item>
       </Grid>
@@ -92,7 +92,7 @@ export default function Site(){
        <Grid item xs={5}>
        <Item elevation={1}>
        <Typography variant="overline" color="text.primary">
-           Tuesday October 11, 5:00 PM
+           Tuesday October 19, 5:00 PM
        </Typography>
        </Item>
       </Grid>
