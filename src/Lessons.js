@@ -17,7 +17,7 @@ import Lesson3 from "./static/images/cards/lesson3.jpg";
 
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
-const columnWidth = Math.max(window.innerWidth-600, 400)
+const columnWidth = Math.max(window.innerWidth-600, 250)
 
 
 const Item = styled(Paper)(({ theme }) => ({

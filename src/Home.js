@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import { makeStyles } from '@mui/styles';
 
-const columnWidth = Math.max(window.innerWidth-600, 400)
+const columnWidth = Math.max(window.innerWidth-600, 250)
 
 export default function Site(){
 

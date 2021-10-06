@@ -14,7 +14,7 @@ import Releases from './Releases';
 import Lessons from './Lessons';
 import Contact from './Contact';
 
-const pageWidth = Math.max(500, window.innerWidth-20);
+const pageWidth = Math.max(250, window.innerWidth-20);
 const panelWidth = pageWidth - 300;
 
 function TabPanel(props) {

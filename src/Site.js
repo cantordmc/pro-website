@@ -9,7 +9,7 @@ import { blueGrey } from '@mui/material/colors'
 import SearchAppBar from './SearchAppBar';
 import Menu from './Menu';
 
-const pageWidth = Math.max(500, window.innerWidth-20);
+const pageWidth = Math.max(400, window.innerWidth-20);
 
 
 

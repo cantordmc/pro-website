@@ -10,7 +10,7 @@ import { CardActionArea } from '@mui/material';
 import Album1 from "./static/images/cards/album1.png";
 import { makeStyles } from '@mui/styles';
 
-const pageWidth = Math.max(300, window.innerWidth-300);
+const pageWidth = Math.max(250, window.innerWidth-300);
 
 
 export default function Site(){
