@@ -14,7 +14,7 @@ export default function Site(){
 
     return(
       <div>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom color="primary.light">
             Contact
         </Typography>
         <Card>

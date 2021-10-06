@@ -8,8 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const custom_theme = createTheme({
   palette: {
     mode: "dark",
-    primary: blueGrey,
-    secondary: orange,
+    primary: orange,
+    secondary: blueGrey,
     background: '#263238'
   }
 })

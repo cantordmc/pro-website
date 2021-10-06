@@ -17,6 +17,8 @@ import Lesson3 from "./static/images/cards/lesson3.jpg";
 
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
+const columnWidth = Math.max(window.innerWidth-600, 400)
+
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -31,10 +33,10 @@ export default function Site(){
 
     return(
       <div>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom color="primary.light">
             Lessons
         </Typography>
-    <Card sx={{ maxWidth: 700 }}>
+    <Card sx={{ width: columnWidth }}>
       <CardMedia
         wide
         component="img"
@@ -58,7 +60,7 @@ export default function Site(){
        </Grid>
        <Grid item xs={5}>
        <Item elevation={1}>
-       <Typography variant="overline" color="text.primary">
+       <Typography variant="overline" color="text.primary" sm="none" md="">
            Tuesday October 12, 5:00 PM
        </Typography>
        </Item>
@@ -67,7 +69,7 @@ export default function Site(){
       </CardContent>
     </Card>
 
-    <Card sx={{ maxWidth: 700 }}>
+    <Card sx={{ width: columnWidth }}>
       <CardMedia
         wide
         component="img"

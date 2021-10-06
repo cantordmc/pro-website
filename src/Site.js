@@ -7,6 +7,11 @@ import { styled, alpha } from '@mui/material/styles';
 import { blueGrey } from '@mui/material/colors'
 
 import SearchAppBar from './SearchAppBar';
+import Menu from './Menu';
+
+const pageWidth = Math.max(500, window.innerWidth-20);
+
+
 
 const useStyles = makeStyles((theme) => ({
   backgroundPaper: {
@@ -19,9 +24,10 @@ export default function Site(){
 
     return(
         <div>
-            <Paper elevation={0} className={classes.backgroundPaper} square="true">
+            <Box className={classes.backgroundPaper} width={pageWidth}>
                 <SearchAppBar />
-            </Paper>
+                <Menu />
+            </Box>
         </div>
     )
 }

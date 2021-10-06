@@ -13,11 +13,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 
-
-
-import Menu from './Menu';
-
-
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -73,15 +68,14 @@ export default function SearchAppBar() {
             variant="h6"
             noWrap
             component="div"
-            color="secondary.light"
+            color="primary.dark"
             fontWeight="fontWeightBold"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { sm: 'block' } }}
           >
             Producers and Remixers Org at UCSD
           </Typography>
         </Toolbar>
       </AppBar>
-      <Menu />
     </Box>
   );
 }

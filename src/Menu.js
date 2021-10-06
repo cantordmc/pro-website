@@ -14,7 +14,8 @@ import Releases from './Releases';
 import Lessons from './Lessons';
 import Contact from './Contact';
 
-
+const pageWidth = Math.max(500, window.innerWidth-20);
+const panelWidth = pageWidth - 300;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,6 +60,7 @@ export default function Menu() {
   return (
     <Box
         minHeight = {window.innerHeight-60}
+        width = {pageWidth}
       sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex',
   }}
     >
@@ -66,8 +68,8 @@ export default function Menu() {
       <Tabs
         orientation="vertical"
         value={value}
-        textColor="secondary"
-        indicatorColor="secondary"
+        textColor="primary"
+        indicatorColor="primary"
         onChange={handleChange}
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
@@ -80,35 +82,35 @@ export default function Menu() {
       </Tabs>
       </div>
       <TabPanel value={value} index={0}>
-        <Box width={window.innerWidth-300}>
+        <Box width={panelWidth}>
           <Container>
               <Home />
         </Container>
         </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
-       <Box width={window.innerWidth-300}>
+       <Box width={panelWidth}>
         <Container>
             <Artists />
           </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <Box width={window.innerWidth-300}>
+      <Box width={panelWidth}>
        <Container>
             <Releases />
           </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={3}>
-       <Box width={window.innerWidth-300}>
+       <Box width={panelWidth}>
         <Container>
             <Lessons />
          </Container>
        </Box>
       </TabPanel>
       <TabPanel value={value} index={4}>
-       <Box width={window.innerWidth-300}>
+       <Box width={panelWidth}>
         <Container>
             <Contact />
           </Container>

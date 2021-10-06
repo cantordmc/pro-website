@@ -9,15 +9,16 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import { makeStyles } from '@mui/styles';
 
+const columnWidth = Math.max(window.innerWidth-600, 400)
 
 export default function Site(){
 
     return(
       <div>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom color="primary.light">
             Who We Are
         </Typography>
-        <Card sx={{ maxWidth: window.innerWidth-600 }}>
+        <Card sx={{ width: columnWidth}}>
             <CardContent>
                 <Typography variant="body1" gutterBottom>
                     We like to produce music and help other UCSD students produce with us! We meet weekly Tuesdays at 5pm in CPMC 204.
