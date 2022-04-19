@@ -36,6 +36,11 @@ export default function Site(){
         <Typography variant="h4" gutterBottom color="primary.light">
             Lessons
         </Typography>
+
+        <Typography variant="body2">
+            Coming soon...
+        </Typography>
+    /*
     <Card sx={{ width: columnWidth }}>
       <CardMedia
         wide
@@ -101,6 +106,7 @@ export default function Site(){
       </Grid>
       </CardContent>
     </Card>
+    */
       </div>
     )
 }
